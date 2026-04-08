@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maha Sri B – AI Enthusiast & ML Engineer</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose"><i class="fas fa-times"></i></button>
+  <button class="lb-prev" id="lbPrev"><i class="fas fa-chevron-left"></i></button>
+  <button class="lb-next" id="lbNext"><i class="fas fa-chevron-right"></i></button>
+  <div class="lb-inner">
+    <img id="lbImg" src="" alt=""/>
+    <p id="lbCaption"></p>
+  </div>
+</div>
+
+<!-- Toast notification -->
+<div class="toast" id="toast">
+  <i class="fas fa-bell"></i>
+  <span id="toastMsg"></span>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">Maha Sri B</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certifications">Awards</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+    <a href="https://github.com/Mahasri-B" target="_blank" rel="noopener" class="nav-icon" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/mahasri10" target="_blank" rel="noopener" class="nav-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+  <a href="#projects">Projects</a><a href="#experience">Experience</a>
+  <a href="#certifications">Awards</a><a href="#contact">Contact</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge afu"><span class="badge-dot"></span>Available for opportunities</div>
+      <h1 class="hero-title afu d1">
+        AI Enthusiast &<br/><span class="gradient-text">ML / Data Science</span><br/>Explorer
+      </h1>
+      <p class="hero-sub afu d2">Passionate about building intelligent systems — from computer vision pipelines to NLP chatbots and IoT-AI hybrids. IEEE intern, international exchange student, and lifelong learner.</p>
+      <div class="hero-meta afu d3">
+        <span><i class="fas fa-map-marker-alt"></i> Madurai, India</span>
+        <span><i class="fas fa-university"></i> KARE, B.Tech. CSE</span>
+      </div>
+      <div class="hero-btns afu d4">
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> Projects</a>
+        <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="Resume.pdf" download="MahaSriB_Resume.pdf" class="btn btn-ghost" id="resumeBtn"><i class="fas fa-file-download"></i> Resume</a>
+      </div>
+    </div>
+    <div class="hero-visual afl d2">
+      <div class="hero-card">
+        <div class="hero-avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-inner">
+            <img src="images/Profile images/profile pic.jpeg" alt="Maha Sri B"/>
+          </div>
+          <div class="fbadge b1">AI</div>
+          <div class="fbadge b2">Data</div>
+          <div class="fbadge b3">ML</div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="snum" data-target="8.52">0</span><span class="slabel">CGPA</span></div>
+          <div class="stat"><span class="snum" data-target="6">0</span><span class="splus">+</span><span class="slabel">Projects</span></div>
+          <div class="stat"><span class="snum" data-target="3">0</span><span class="slabel">Internships</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-ind"><div class="scroll-dot"></div></div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag">About Me</span>
+      <h2 class="sec-title">Who I Am</h2>
+    </div>
+    <!-- top row: text left, photo right -->
+    <div class="about-top reveal">
+      <div class="about-text-col">
+        <p>I'm a final-year Computer Science Engineering student at <strong>Kalasalingam Academy of Research and Education</strong> with a CGPA of 8.52. I studied abroad at <strong>INTI International University, Malaysia</strong> as a foreign exchange student (Jan–May 2025).</p>
+        <p>My passion lies at the intersection of <strong>Computer Vision, Deep Learning, and IoT</strong>. I've interned at IEEE NIT Silchar on AI & Cybersecurity, built real-time stress monitoring wearables, and deployed full-stack ML applications.</p>
+        <div class="highlights">
+          <div class="hl-card"><i class="fas fa-globe-asia"></i><span>International Exchange – Malaysia</span></div>
+          <div class="hl-card"><i class="fas fa-award"></i><span>IEEE RAS 2nd Prize Winner</span></div>
+          <div class="hl-card"><i class="fas fa-chalkboard-teacher"></i><span>Frontend Workshop – 50+ Participants</span></div>
+        </div>
+      </div>
+      <div class="about-photo-col">
+        <img src="images/Profile images/about me.jpeg" alt="Maha Sri B" class="about-photo"/>
+      </div>
+    </div>
+    <!-- bottom row: education full width -->
+    <div class="about-grid">
+      <div class="reveal d1">
+        <h3 class="edu-heading">Education</h3>
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div>
+            <h4>B.Tech Computer Science & Engineering</h4>
+            <p>Kalasalingam Academy of Research and Education</p>
+            <span class="tag-date">Sep 2022 – Present</span>
+            <span class="tag-grade">CGPA: 8.52 / 10.00</span>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fas fa-plane"></i></div>
+          <div>
+            <h4>Foreign Exchange Semester</h4>
+            <p>INTI International University, Malaysia</p>
+            <span class="tag-date">Jan 2025 – May 2025</span>
+            <span class="tag-grade">GPA: 3.30 / 4.00</span>
+          </div>
+        </div>
+      </div>
+    </div><!-- end about-grid -->
+  </div><!-- end container -->
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="section alt" id="skills">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag">Technical Skills</span>
+      <h2 class="sec-title">What I Work With</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-cat reveal"><div class="scat-icon"><i class="fas fa-brain"></i></div><h3>AI & Deep Learning</h3><div class="stags"><span>TensorFlow</span><span>PyTorch</span><span>CNNs</span><span>NLP</span><span>BERT</span><span>LSTM</span></div></div>
+      <div class="skill-cat reveal d1"><div class="scat-icon"><i class="fas fa-eye"></i></div><h3>Computer Vision</h3><div class="stags"><span>OpenCV</span><span>Image Registration</span><span>Feature Matching</span><span>Homography</span></div></div>
+      <div class="skill-cat reveal d2"><div class="scat-icon"><i class="fas fa-code"></i></div><h3>Frontend Dev</h3><div class="stags"><span>React.js</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Flask</span></div></div>
+      <div class="skill-cat reveal d3"><div class="scat-icon"><i class="fas fa-tools"></i></div><h3>Tools & Frameworks</h3><div class="stags"><span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>MySQL</span><span>Google Colab</span></div></div>
+    </div>
+    <div class="skill-bars reveal">
+      <div class="bar-item"><div class="bar-label"><span>Python / ML</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-w="90"></div></div></div>
+      <div class="bar-item"><div class="bar-label"><span>Computer Vision</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-w="85"></div></div></div>
+      <div class="bar-item"><div class="bar-label"><span>React.js / Frontend</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-w="80"></div></div></div>
+      <div class="bar-item"><div class="bar-label"><span>Deep Learning</span><span>82%</span></div><div class="bar-track"><div class="bar-fill" data-w="82"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag">Featured Projects</span>
+      <h2 class="sec-title">What I've Built</h2>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj-card reveal" data-demo="https://rgb-thermal-overlay.onrender.com/">
+        <div class="proj-glow"></div>
+        <div class="proj-overlay">
+          <div class="img-slider">
+            <div class="img-slide active placeholder-slide"><i class="fas fa-thermometer-half"></i><span>RGB–Thermal System</span></div>
+          </div>
+          <a href="https://rgb-thermal-overlay.onrender.com/" target="_blank" rel="noopener" class="overlay-demo-btn" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Open Live Demo</a>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-thermometer-half"></i></div>
+            <a href="https://rgb-thermal-overlay.onrender.com/" target="_blank" rel="noopener" class="proj-link" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          </div>
+          <h3>RGB–Thermal Image Alignment & Overlay System</h3>
+          <p>Aligned thermal images with RGB using OpenCV feature matching and homography. Deployed as a Flask web app for real-time overlay generation.</p>
+          <div class="proj-tags"><span>OpenCV</span><span>Flask</span><span>Homography</span><span>Python</span></div>
+          <span class="proj-date">Dec 2025</span>
+        </div>
+      </div>
+
+      <div class="proj-card reveal d1" data-demo="https://bitcoin-anamoly-detection.vercel.app/">
+        <div class="proj-glow"></div>
+        <div class="proj-overlay">
+          <div class="img-slider">
+            <div class="img-slide active placeholder-slide"><i class="fab fa-bitcoin"></i><span>Bitcoin Anomaly Detection</span></div>
+          </div>
+          <a href="https://bitcoin-anamoly-detection.vercel.app/" target="_blank" rel="noopener" class="overlay-demo-btn" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Open Live Demo</a>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fab fa-bitcoin"></i></div>
+            <a href="https://bitcoin-anamoly-detection.vercel.app/" target="_blank" rel="noopener" class="proj-link" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          </div>
+          <h3>Bitcoin Transaction Anomaly Detection</h3>
+          <p>Unsupervised ML system to detect anomalous Bitcoin transactions with a live web interface for real-time analysis.</p>
+          <div class="proj-tags"><span>ML</span><span>Unsupervised</span><span>React</span><span>Python</span></div>
+          <span class="proj-date">Nov – Dec 2025</span>
+        </div>
+      </div>
+
+      <div class="proj-card reveal d2">
+        <div class="proj-glow"></div>
+        <div class="proj-overlay">
+          <div class="img-slider">
+            <div class="img-slide active"><img src="images/Project information/Stress Monitoring Cap/Stress monitoring cap - poster.png" alt="Stress Cap Poster"/></div>
+            <div class="img-slide"><img src="images/Project information/Stress Monitoring Cap/Presentation -2.jpg" alt="Stress Cap 2"/></div>
+            <div class="img-slide"><img src="images/Project information/Stress Monitoring Cap/Presentation -3.jpg" alt="Stress Cap 3"/></div>
+          </div>
+          <div class="slider-dots"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><div class="proj-icon"><i class="fas fa-heartbeat"></i></div></div>
+          <h3>Stress Monitoring Cap</h3>
+          <p>Wearable IoT device using ECG, EEG, and GSR sensors to detect stress. Data processed via LSTM model and sent to Blynk Cloud for real-time feedback.</p>
+          <div class="proj-tags"><span>IoT</span><span>LSTM</span><span>ECG/EEG</span><span>Blynk</span></div>
+          <span class="proj-date">Jun – Dec 2024</span>
+        </div>
+      </div>
+
+      <div class="proj-card reveal d3">
+        <div class="proj-glow"></div>
+        <div class="proj-overlay">
+          <div class="img-slider">
+            <div class="img-slide active placeholder-slide"><i class="fas fa-comments"></i><span>Multilingual Chatbot</span></div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><div class="proj-icon"><i class="fas fa-comments"></i></div></div>
+          <h3>Multilingual Chatbot for Mental Support</h3>
+          <p>Intelligent chatbot supporting 5+ languages using BERT-based NLP for sentiment analysis and intent classification.</p>
+          <div class="proj-tags"><span>BERT</span><span>NLP</span><span>Multilingual</span><span>Python</span></div>
+          <span class="proj-date">Jun – Dec 2024</span>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-glow"></div>
+        <div class="proj-overlay">
+          <div class="img-slider">
+            <div class="img-slide active placeholder-slide"><i class="fas fa-chart-line"></i><span>CTR Prediction</span></div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><div class="proj-icon"><i class="fas fa-chart-line"></i></div></div>
+          <h3>CTR Prediction</h3>
+          <p>Predictive model to estimate Click-Through Rate using ad campaign data and machine learning algorithms.</p>
+          <div class="proj-tags"><span>ML</span><span>Scikit-learn</span><span>Pandas</span><span>Python</span></div>
+          <span class="proj-date">Dec 2023 – May 2024</span>
+        </div>
+      </div>
+
+      <div class="proj-card reveal d1">
+        <div class="proj-glow"></div>
+        <div class="proj-overlay">
+          <div class="img-slider">
+            <div class="img-slide active"><img src="images/Project information/UPI Based charging System/UPi Based charging system.png" alt="UPI System"/></div>
+            <div class="img-slide"><img src="images/Project information/UPI Based charging System/working mechanism.jpg" alt="Working Mechanism"/></div>
+            <div class="img-slide"><img src="images/Project information/UPI Based charging System/working mechanism.png" alt="Working Mechanism 2"/></div>
+          </div>
+          <div class="slider-dots"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top"><div class="proj-icon"><i class="fas fa-charging-station"></i></div></div>
+          <h3>UPI-Based Charging System</h3>
+          <p>IoT-based mobile charging system integrated with Arduino, GSM, and UPI payments with real-time verification.</p>
+          <div class="proj-tags"><span>IoT</span><span>Arduino</span><span>GSM</span><span>UPI</span></div>
+          <span class="proj-date">Jun – Dec 2024</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section class="section alt" id="experience">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag">Experience</span>
+      <h2 class="sec-title">Where I've Worked</h2>
+    </div>
+    <div class="timeline">
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"><i class="fas fa-microchip"></i></div>
+        <div class="tl-card">
+          <div class="tl-overlay">
+            <div class="img-slider">
+              <div class="img-slide active"><img src="images/Experience/Student Summer Intern – AI & Cybersecurity.jpeg" alt="IEEE Internship"/></div>
+            </div>
+          </div>
+          <div class="tl-header">
+            <div><h3>Student Summer Intern – AI & Cybersecurity</h3><p class="tl-company"><i class="fas fa-building"></i> IEEE – NIT Silchar Subsection</p></div>
+            <span class="tl-date">Jun – Aug 2024</span>
+          </div>
+          <ul>
+            <li>Conducted research on integrating ChatGPT and generative AI into IoV systems.</li>
+            <li>Analyzed cybersecurity vulnerabilities and proposed ML-based defensive strategies.</li>
+            <li>Co-created a prototype for a secure, intelligent EV framework using ML insights.</li>
+          </ul>
+          <div class="tl-ref"><i class="fas fa-user-tie"></i><span>Ref: Dr. M. Chakkarapani – <a href="mailto:mchakkarapani@rgipt.ac.in">mchakkarapani@rgipt.ac.in</a></span></div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal d1">
+        <div class="tl-dot"><i class="fas fa-laptop-code"></i></div>
+        <div class="tl-card">
+          <div class="tl-overlay">
+            <div class="img-slider">
+              <div class="img-slide active placeholder-slide"><i class="fas fa-laptop-code"></i><span>Unimity Solutions</span></div>
+            </div>
+          </div>
+          <div class="tl-header">
+            <div><h3>Frontend Development Intern</h3><p class="tl-company"><i class="fas fa-building"></i> Unimity Solutions Pvt. Ltd.</p></div>
+            <span class="tl-date">May – Jun 2024</span>
+          </div>
+          <ul>
+            <li>Designed responsive web interfaces using React.js with focus on clean UI/UX.</li>
+            <li>Used React Hooks (useEffect, useState, useContext) for state management.</li>
+            <li>Collaborated in Agile sprints and participated in code reviews.</li>
+          </ul>
+          <div class="tl-ref"><i class="fas fa-user-tie"></i><span>Ref: Ms. Sharmila S Kumaran – <a href="mailto:sharmila.s@unimity.com">sharmila.s@unimity.com</a></span></div>
+        </div>
+      </div>
+
+      <div class="tl-item reveal d2">
+        <div class="tl-dot"><i class="fas fa-globe"></i></div>
+        <div class="tl-card">
+          <div class="tl-overlay">
+            <div class="img-slider">
+              <div class="img-slide active placeholder-slide"><i class="fas fa-globe"></i><span>CodeBind Technologies</span></div>
+            </div>
+          </div>
+          <div class="tl-header">
+            <div><h3>Web Development Intern</h3><p class="tl-company"><i class="fas fa-building"></i> CodeBind Technologies, Chennai</p></div>
+            <span class="tl-date">Jun 2023</span>
+          </div>
+          <ul>
+            <li>Built full-stack web apps using HTML, CSS, PHP, and MySQL.</li>
+            <li>Ensured responsive design and implemented security best practices.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section class="section" id="certifications">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag">Achievements</span>
+      <h2 class="sec-title">Certifications & Awards</h2>
+    </div>
+    <div class="certs-grid">
+
+      <div class="cert-card reveal">
+        <div class="cert-overlay">
+          <div class="img-slider"><div class="img-slide active"><img src="images/Certificate and awards/The Complete Neural Networks Bootcamp/The complete neural network bootcamp.png" alt="Neural Networks Cert"/></div></div>
+        </div>
+        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+        <p>The Complete Neural Networks Bootcamp</p>
+        <span class="cert-hover-hint"><i class="fas fa-images"></i> Hover to view</span>
+      </div>
+
+      <div class="cert-card reveal d1">
+        <div class="cert-overlay">
+          <div class="img-slider"><div class="img-slide active"><img src="images/Certificate and awards/Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate/oracle.jpg" alt="Oracle Cert"/></div></div>
+        </div>
+        <div class="cert-icon"><i class="fab fa-oracle"></i></div>
+        <p>Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate</p>
+        <span class="cert-hover-hint"><i class="fas fa-images"></i> Hover to view</span>
+      </div>
+
+      <div class="cert-card reveal d2">
+        <div class="cert-overlay">
+          <div class="img-slider"><div class="img-slide active"><img src="images/Certificate and awards/2nd Prize – IEEE RAS Project Showcase (KARE)/2nd price in ieee ras.jpeg" alt="IEEE RAS Award"/></div></div>
+        </div>
+        <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+        <p>2nd Prize – IEEE RAS Project Showcase (KARE)</p>
+        <span class="cert-hover-hint"><i class="fas fa-images"></i> Hover to view</span>
+      </div>
+
+      <div class="cert-card reveal d3">
+        <div class="cert-overlay">
+          <div class="img-slider"><div class="img-slide active"><img src="images/Certificate and awards/2nd Place – Brilliant Bharath Hackathon 2026 (Viksit Bharat)/2nd price in brilliant bharath hackathon.jpeg" alt="Hackathon Award"/></div></div>
+        </div>
+        <div class="cert-icon"><i class="fas fa-medal"></i></div>
+        <p>2nd Place – Brilliant Bharath Hackathon 2026 (Viksit Bharat)</p>
+        <span class="cert-hover-hint"><i class="fas fa-images"></i> Hover to view</span>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-overlay">
+          <div class="img-slider"><div class="img-slide active"><img src="images/Certificate and awards/Former KARE IEEE CS Society & KARE ACM Web Developer (2024)/ieee society member.jpeg" alt="IEEE ACM Member"/></div></div>
+        </div>
+        <div class="cert-icon"><i class="fas fa-code-branch"></i></div>
+        <p>Former KARE IEEE CS Society & KARE ACM Web Developer (2024)</p>
+        <span class="cert-hover-hint"><i class="fas fa-images"></i> Hover to view</span>
+      </div>
+
+      <div class="cert-card reveal d1">
+        <div class="cert-overlay">
+          <div class="img-slider">
+            <div class="img-slide active"><img src="images/Certificate and awards/Conducted Frontend Workshop for 50+ participants with positive feedback/workshop.jpeg" alt="Workshop 1"/></div>
+            <div class="img-slide"><img src="images/Certificate and awards/Conducted Frontend Workshop for 50+ participants with positive feedback/workshop2.jpeg" alt="Workshop 2"/></div>
+            <div class="img-slide"><img src="images/Certificate and awards/Conducted Frontend Workshop for 50+ participants with positive feedback/worshop 1.jpeg" alt="Workshop 3"/></div>
+            <div class="img-slide"><img src="images/Certificate and awards/Conducted Frontend Workshop for 50+ participants with positive feedback/worshop 3.jpeg" alt="Workshop 4"/></div>
+          </div>
+          <div class="slider-dots"></div>
+        </div>
+        <div class="cert-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <p>Conducted Frontend Workshop for 50+ participants</p>
+        <span class="cert-hover-hint"><i class="fas fa-images"></i> Hover to view</span>
+      </div>
+
+      <div class="cert-card reveal d2">
+        <div class="cert-overlay">
+          <div class="img-slider">
+            <div class="img-slide active"><img src="images/Certificate and awards/ACM Outreach Volunteer — Mentored 100+ government school students through Hour of Code technology outreach/government school .jpeg" alt="Outreach 1"/></div>
+            <div class="img-slide"><img src="images/Certificate and awards/ACM Outreach Volunteer — Mentored 100+ government school students through Hour of Code technology outreach/government school 2.jpeg" alt="Outreach 2"/></div>
+            <div class="img-slide"><img src="images/Certificate and awards/ACM Outreach Volunteer — Mentored 100+ government school students through Hour of Code technology outreach/government school 3.jpeg" alt="Outreach 3"/></div>
+            <div class="img-slide"><img src="images/Certificate and awards/ACM Outreach Volunteer — Mentored 100+ government school students through Hour of Code technology outreach/government school 4.jpeg" alt="Outreach 4"/></div>
+          </div>
+          <div class="slider-dots"></div>
+        </div>
+        <div class="cert-icon"><i class="fas fa-hands-helping"></i></div>
+        <p>ACM Outreach Volunteer — Mentored 100+ government school students through Hour of Code</p>
+        <span class="cert-hover-hint"><i class="fas fa-images"></i> Hover to view</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section alt" id="contact">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag">Contact</span>
+      <h2 class="sec-title">Let's Connect</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="contact-intro">Open to internships, collaborations, and full-time opportunities in AI, ML, and Full-Stack Development. Fill the form — I'll get back to you.</p>
+        <div class="contact-links">
+          <a href="mailto:mahasribairavanathan@gmail.com" class="c-item"><div class="c-icon"><i class="fas fa-envelope"></i></div><div><span>Email</span><p>mahasribairavanathan@gmail.com</p></div></a>
+          <a href="tel:+919894330457" class="c-item"><div class="c-icon"><i class="fas fa-phone"></i></div><div><span>Phone</span><p>+91-9894330457</p></div></a>
+          <a href="https://www.linkedin.com/in/mahasri10" target="_blank" rel="noopener" class="c-item"><div class="c-icon"><i class="fab fa-linkedin"></i></div><div><span>LinkedIn</span><p>linkedin.com/in/mahasri10</p></div></a>
+          <a href="https://github.com/Mahasri-B" target="_blank" rel="noopener" class="c-item"><div class="c-icon"><i class="fab fa-github"></i></div><div><span>GitHub</span><p>github.com/Mahasri-B</p></div></a>
+          <div class="c-item no-hover"><div class="c-icon"><i class="fas fa-map-marker-alt"></i></div><div><span>Location</span><p>Kalavasal, Madurai, India</p></div></div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <form class="contact-form" id="contactForm">
+          <div class="fg"><input type="text" id="cf-name" placeholder="Your Name" required/></div>
+          <div class="fg"><input type="email" id="cf-email" placeholder="Your Email" required/></div>
+          <div class="fg"><input type="text" id="cf-subject" placeholder="Subject"/></div>
+          <div class="fg"><textarea rows="5" id="cf-msg" placeholder="Your Message" required></textarea></div>
+          <button type="submit" class="btn btn-primary full-w" id="submitBtn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p class="form-note"><i class="fas fa-lock"></i> Your message goes directly to Maha Sri's inbox.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Designed & Built by <span class="gradient-text">Maha Sri B</span></p>
+  <p class="footer-sub">© 2025 · AI Enthusiast & ML / Data Science Explorer</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+""
