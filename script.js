@@ -182,7 +182,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   if(EMAILJS_KEY !== 'YOUR_PUBLIC_KEY'){
     try {
       await emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE,
-        { from_name: name, from_email: email, subject, message },
+        { name: name, email: email, title: subject, message: message },
         EMAILJS_KEY
       );
       btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
