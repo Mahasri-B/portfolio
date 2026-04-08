@@ -163,9 +163,9 @@ function showToast(msg, duration = 4000){
 /* ===== CONTACT FORM — EmailJS ===== */
 // To receive emails: go to emailjs.com, create a free account,
 // add an Email Service, create a template, then replace the 3 values below.
-const EMAILJS_SERVICE  = 'YOUR_SERVICE_ID';
+const EMAILJS_SERVICE  = 'service_0yaq2eh';
 const EMAILJS_TEMPLATE = 'YOUR_TEMPLATE_ID';
-const EMAILJS_KEY      = 'YOUR_PUBLIC_KEY';
+const EMAILJS_KEY      = 'q5ikh8IIVMo1Y5LeC';
 
 document.getElementById('contactForm').addEventListener('submit', async function(e){
   e.preventDefault();
