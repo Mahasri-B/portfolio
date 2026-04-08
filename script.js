@@ -167,6 +167,8 @@ const EMAILJS_SERVICE  = 'service_0yaq2eh';
 const EMAILJS_TEMPLATE = 'template_p7hwh6d';
 const EMAILJS_KEY      = 'q5ikh8IIVMo1Y5LeC';
 
+emailjs.init(EMAILJS_KEY);
+
 document.getElementById('contactForm').addEventListener('submit', async function(e){
   e.preventDefault();
   const btn = document.getElementById('submitBtn');
@@ -182,8 +184,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   if(EMAILJS_KEY !== 'YOUR_PUBLIC_KEY'){
     try {
       await emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE,
-        { name: name, email: email, title: subject, message: message },
-        EMAILJS_KEY
+        { name: name, email: email, title: subject, message: message }
       );
       btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
       btn.style.background = 'linear-gradient(135deg,#10b981,#059669)';
