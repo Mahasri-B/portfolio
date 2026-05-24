@@ -154,17 +154,10 @@
       <span class="sec-tag">Technical Skills</span>
       <h2 class="sec-title">What I Work With</h2>
     </div>
-    <div class="skills-grid">
-      <div class="skill-cat reveal"><div class="scat-icon"><i class="fas fa-brain"></i></div><h3>AI & Deep Learning</h3><div class="stags"><span>TensorFlow</span><span>PyTorch</span><span>CNNs</span><span>NLP</span><span>BERT</span><span>LSTM</span></div></div>
+    <div class="skills-grid">      <div class="skill-cat reveal"><div class="scat-icon"><i class="fas fa-brain"></i></div><h3>AI & Deep Learning</h3><div class="stags"><span>TensorFlow</span><span>PyTorch</span><span>CNNs</span><span>NLP</span><span>BERT</span><span>LSTM</span></div></div>
       <div class="skill-cat reveal d1"><div class="scat-icon"><i class="fas fa-eye"></i></div><h3>Computer Vision</h3><div class="stags"><span>OpenCV</span><span>Image Registration</span><span>Feature Matching</span><span>Homography</span></div></div>
       <div class="skill-cat reveal d2"><div class="scat-icon"><i class="fas fa-code"></i></div><h3>Frontend Dev</h3><div class="stags"><span>React.js</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Flask</span></div></div>
       <div class="skill-cat reveal d3"><div class="scat-icon"><i class="fas fa-tools"></i></div><h3>Tools & Frameworks</h3><div class="stags"><span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>MySQL</span><span>Google Colab</span></div></div>
-    </div>
-    <div class="skill-bars reveal">
-      <div class="bar-item"><div class="bar-label"><span>Python / ML</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-w="90"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Computer Vision</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-w="85"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>React.js / Frontend</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-w="80"></div></div></div>
-      <div class="bar-item"><div class="bar-label"><span>Deep Learning</span><span>82%</span></div><div class="bar-track"><div class="bar-fill" data-w="82"></div></div></div>
     </div>
   </div>
 </section>
@@ -288,6 +281,26 @@
         </div>
       </div>
 
+      <!-- Wayvo AI -->
+      <div class="proj-card reveal d2">
+        <div class="proj-glow"></div>
+        <div class="proj-overlay">
+          <div class="img-slider">
+            <div class="img-slide active placeholder-slide"><i class="fas fa-route"></i><span>Wayvo AI – Smart Travel Assistant</span></div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-route"></i></div>
+            <span class="proj-badge">New</span>
+          </div>
+          <h3>Wayvo AI – Smart Travel Assistant for Tamil Nadu</h3>
+          <p>Intelligent travel planning platform with route optimization, transport comparison, weather integration, and AI-based travel assistance for Tamil Nadu tourism and local transport.</p>
+          <div class="proj-tags"><span>LLM Integration</span><span>API Integration</span><span>Geo-location</span><span>AI Navigation</span><span>Python</span></div>
+          <span class="proj-date">2025</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -388,7 +401,7 @@
         <div class="cert-overlay">
           <div class="img-slider"><div class="img-slide active"><img src="images/Certificate and awards/Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate/oracle.jpg" alt="Oracle Cert"/></div></div>
         </div>
-        <div class="cert-icon"><i class="fab fa-oracle"></i></div>
+        <div class="cert-icon"><i class="fas fa-cloud"></i></div>
         <p>Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate</p>
         <span class="cert-hover-hint"><i class="fas fa-images"></i> Hover to view</span>
       </div>
@@ -493,7 +506,38 @@
   <p class="footer-sub">© 2025 · AI Enthusiast & ML / Data Science Explorer</p>
 </footer>
 
+<!-- ===== PORTFOLIO CHATBOT ===== -->
+<div class="chat-bubble" id="chatBubble" title="Ask me anything about Maha Sri!">
+  <i class="fas fa-robot" id="chatBubbleIcon"></i>
+  <span class="chat-ping"></span>
+</div>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div class="chat-header-info">
+      <div class="chat-avatar"><i class="fas fa-robot"></i></div>
+      <div>
+        <p>Maha Sri's Assistant</p>
+        <span class="chat-status"><span class="chat-online"></span>Online</span>
+      </div>
+    </div>
+    <button class="chat-close" id="chatClose"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg bot"><span>Hi! 👋 I'm Maha Sri's portfolio assistant. Ask me anything about her skills, projects, experience, or education!</span></div>
+  </div>
+  <div class="chat-suggestions" id="chatSuggestions">
+    <button onclick="askBot('What are your skills?')">Skills</button>
+    <button onclick="askBot('Tell me about your projects')">Projects</button>
+    <button onclick="askBot('What is your experience?')">Experience</button>
+    <button onclick="askBot('How can I contact you?')">Contact</button>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Ask something…" autocomplete="off"/>
+    <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
 <script src="script.js"></script>
 </body>
-</html>
-""
+</html></span>
