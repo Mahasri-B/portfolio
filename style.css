@@ -299,29 +299,26 @@ img{display:block;max-width:100%;}
   display:flex;align-items:center;justify-content:center;
   color:#fff;font-size:.9rem;z-index:1;box-shadow:0 0 20px var(--glow);}
 .tl-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);
-  overflow:hidden;transition:all .3s;position:relative;}
+  overflow:hidden;transition:all .3s;}
 .tl-card:hover{border-color:var(--accent);box-shadow:0 8px 30px var(--glow);}
 
-/* Experience hover overlay — slides in from top */
+/* Experience — image reveals above content, no overlap */
 .tl-overlay{
-  position:absolute;top:0;left:0;right:0;height:260px;
-  transform:translateY(-100%);
-  transition:transform .45s cubic-bezier(.34,1.2,.64,1);
-  z-index:2;overflow:hidden;
+  max-height:0;overflow:hidden;
+  transition:max-height .5s cubic-bezier(.4,0,.2,1);
 }
-.tl-card:hover .tl-overlay{transform:translateY(0);}
+.tl-card:hover .tl-overlay{max-height:280px;}
+.tl-overlay .img-slide{position:relative;opacity:1;}
 .tl-overlay .img-slide img{
-  width:100%;height:260px;
+  width:100%;height:240px;
   object-fit:cover;object-position:center center;
+  display:block;
 }
-/* push content down when overlay is visible */
-.tl-content-wrap{padding:1.5rem;transition:padding-top .45s cubic-bezier(.34,1.2,.64,1);}
-.tl-card:hover .tl-content-wrap{padding-top:280px;}
-/* IEEE banner is wide — show center */
+.tl-content-wrap{padding:1.5rem;transition:none;}
+.tl-card:hover .tl-content-wrap{padding-top:1.5rem;}
+/* IEEE banner — contain so full logo shows */
 .tl-item:first-child .tl-overlay .img-slide img{
-  object-fit:contain;
-  background:#0a0a1a;
-  object-position:center center;
+  object-fit:contain;background:#0a0a1a;height:200px;
 }
 
 .tl-content-wrap{padding:1.5rem;}
