@@ -302,25 +302,23 @@ img{display:block;max-width:100%;}
   overflow:hidden;transition:all .3s;}
 .tl-card:hover{border-color:var(--accent);box-shadow:0 8px 30px var(--glow);}
 
-/* Experience — image reveals above content, no overlap */
+/* Experience — image expands above text, no overlap */
 .tl-overlay{
-  max-height:0;overflow:hidden;
-  transition:max-height .5s cubic-bezier(.4,0,.2,1);
-  width:100%;
+  overflow:hidden;
+  max-height:0;
+  transition:max-height .5s ease;
 }
 .tl-card:hover .tl-overlay{ max-height:260px; }
 .tl-overlay .img-slide{
-  position:relative;opacity:1;height:220px;
-  display:flex;align-items:center;justify-content:center;
+  position:relative;opacity:1;
+  height:220px;overflow:hidden;
 }
 .tl-overlay .img-slide img{
   width:100%;height:220px;
   object-fit:cover;object-position:center center;display:block;
 }
-/* IEEE banner wide — contain */
-.tl-item:first-child .tl-overlay .img-slide{background:#0a0a1a;}
+.tl-item:first-child .tl-overlay .img-slide{background:#0a0a1a;display:flex;align-items:center;}
 .tl-item:first-child .tl-overlay .img-slide img{object-fit:contain;height:180px;}
-/* content wrapper always below overlay */
 .tl-content-wrap{padding:1.5rem;}
 .tl-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;gap:1rem;}
 .tl-header h3{font-size:1rem;margin-bottom:4px;}
