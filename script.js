@@ -211,21 +211,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   }, 4000);
 });
 
-/* ===== tl-card layout fix — push content below overlay ===== */
-document.querySelectorAll('.tl-card').forEach(card => {
-  const overlay = card.querySelector('.tl-overlay');
-  const header  = card.querySelector('.tl-header');
-  const ul      = card.querySelector('ul');
-  const ref     = card.querySelector('.tl-ref');
-  if(!overlay) return;
-  // wrap content so overlay doesn't cover it
-  const wrap = document.createElement('div');
-  wrap.className = 'tl-content-wrap';
-  if(header) wrap.appendChild(header);
-  if(ul) wrap.appendChild(ul);
-  if(ref) wrap.appendChild(ref);
-  card.appendChild(wrap);
-});
+/* ===== tl-card layout — content always below overlay ===== */
 
 /* ===== CHATBOT ===== */
 const KB = {
